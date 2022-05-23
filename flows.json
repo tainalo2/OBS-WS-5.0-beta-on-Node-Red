@@ -1,0 +1,1064 @@
+[
+    {
+        "id": "439293f90e5f4491",
+        "type": "tab",
+        "label": "OBS WS 5.0 beta",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "18d3c264c07b4120",
+        "type": "group",
+        "z": "439293f90e5f4491",
+        "name": "Connection to OBS WS 5.0",
+        "style": {
+            "label": true,
+            "fill": "#addb7b",
+            "color": "#000000"
+        },
+        "nodes": [
+            "fa66e5edd9983a0f",
+            "3b3bc9eb533a5747",
+            "fdb0304f33a07eca",
+            "6afaebe633204668",
+            "5c2e63196edb8d23",
+            "a99766e58cf4caf4",
+            "aea6db4c94ea1bdd",
+            "0b1fc7cb3c0d0c32",
+            "a22e014a9168b0d3"
+        ],
+        "x": 54,
+        "y": 19,
+        "w": 732,
+        "h": 182
+    },
+    {
+        "id": "774c74c067757f9d",
+        "type": "group",
+        "z": "439293f90e5f4491",
+        "name": "WebPage with WS jumper to dock",
+        "style": {
+            "stroke": "#7f7f7f",
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "0ab82f7326f8752b",
+            "48423c40fd94f643",
+            "e0ac1afd4793f936"
+        ],
+        "x": 814,
+        "y": 19,
+        "w": 512,
+        "h": 82
+    },
+    {
+        "id": "314cd3150839235c",
+        "type": "group",
+        "z": "439293f90e5f4491",
+        "name": "OBS WS authent and identified",
+        "style": {
+            "label": true,
+            "stroke": "#000000",
+            "fill": "#ff7f7f",
+            "color": "#000000"
+        },
+        "nodes": [
+            "d2be4b2882d4509b",
+            "d27aa9ed40e5f01e",
+            "04da89f0ee0e1822",
+            "667e1e6ff444caca",
+            "8a74eaf39165a1e8",
+            "649053179c67ea21",
+            "31b8067e33aa7f84",
+            "6a3dc718253f9ba8",
+            "f2e770fe49450e0c",
+            "9e43380ed894e2c2",
+            "b76562d009cdac99",
+            "2957e6aac0dddfa8"
+        ],
+        "x": 54,
+        "y": 219,
+        "w": 662,
+        "h": 202
+    },
+    {
+        "id": "c413499401ce8677",
+        "type": "group",
+        "z": "439293f90e5f4491",
+        "name": "EventSub OBS selection",
+        "style": {
+            "label": true,
+            "fill": "#ffffbf"
+        },
+        "nodes": [
+            "38e9152b08e0e522",
+            "9f5ca7620cfc9e49",
+            "e273fe28a425b6a3"
+        ],
+        "x": 814,
+        "y": 119,
+        "w": 572,
+        "h": 82
+    },
+    {
+        "id": "f1ab990f8efd915a",
+        "type": "group",
+        "z": "439293f90e5f4491",
+        "name": "Scene lister and switcher",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#ffdf7f",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "ca8ffc0f36835e71",
+            "ec9610882fbad670",
+            "4294b6c615b22873",
+            "db9e59b564316bc9",
+            "f23fddc2be9c2431",
+            "57aa5f8bf77d3c7c",
+            "aa75ce230d935396",
+            "84a78d61aff23be9",
+            "eae4b9c9a091cdfe",
+            "e7a92e2bea4c2ed3"
+        ],
+        "x": 54,
+        "y": 439,
+        "w": 832,
+        "h": 162
+    },
+    {
+        "id": "fa66e5edd9983a0f",
+        "type": "websocket in",
+        "z": "439293f90e5f4491",
+        "g": "18d3c264c07b4120",
+        "name": "",
+        "server": "6fdb978375899d4f",
+        "client": "",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "a22e014a9168b0d3"
+            ]
+        ]
+    },
+    {
+        "id": "3b3bc9eb533a5747",
+        "type": "debug",
+        "z": "439293f90e5f4491",
+        "g": "18d3c264c07b4120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fdb0304f33a07eca",
+        "type": "websocket out",
+        "z": "439293f90e5f4491",
+        "g": "18d3c264c07b4120",
+        "name": "",
+        "server": "6fdb978375899d4f",
+        "client": "",
+        "x": 380,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6afaebe633204668",
+        "type": "json",
+        "z": "439293f90e5f4491",
+        "g": "18d3c264c07b4120",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 530,
+        "y": 60,
+        "wires": [
+            [
+                "3b3bc9eb533a5747",
+                "5c2e63196edb8d23"
+            ]
+        ]
+    },
+    {
+        "id": "5c2e63196edb8d23",
+        "type": "link out",
+        "z": "439293f90e5f4491",
+        "g": "18d3c264c07b4120",
+        "name": "FROM OBS WS 5.0",
+        "mode": "link",
+        "links": [
+            "d2be4b2882d4509b",
+            "ec9610882fbad670"
+        ],
+        "x": 635,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a99766e58cf4caf4",
+        "type": "link in",
+        "z": "439293f90e5f4491",
+        "g": "18d3c264c07b4120",
+        "name": "TO OBS WS 5.0",
+        "links": [
+            "04da89f0ee0e1822",
+            "345706f2d6707fc0",
+            "18a3ef3372ebdfac",
+            "eae4b9c9a091cdfe"
+        ],
+        "x": 95,
+        "y": 120,
+        "wires": [
+            [
+                "aea6db4c94ea1bdd",
+                "0b1fc7cb3c0d0c32"
+            ]
+        ]
+    },
+    {
+        "id": "aea6db4c94ea1bdd",
+        "type": "json",
+        "z": "439293f90e5f4491",
+        "g": "18d3c264c07b4120",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "fdb0304f33a07eca"
+            ]
+        ]
+    },
+    {
+        "id": "d2be4b2882d4509b",
+        "type": "link in",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "ENTER WS OpCode 1",
+        "links": [
+            "5c2e63196edb8d23"
+        ],
+        "x": 95,
+        "y": 260,
+        "wires": [
+            [
+                "d27aa9ed40e5f01e"
+            ]
+        ]
+    },
+    {
+        "id": "d27aa9ed40e5f01e",
+        "type": "switch",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "",
+        "property": "payload.op",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "b76562d009cdac99"
+            ]
+        ]
+    },
+    {
+        "id": "04da89f0ee0e1822",
+        "type": "link out",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "Exit OpCode 1",
+        "mode": "link",
+        "links": [
+            "a99766e58cf4caf4"
+        ],
+        "x": 675,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0b1fc7cb3c0d0c32",
+        "type": "debug",
+        "z": "439293f90e5f4491",
+        "g": "18d3c264c07b4120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 210,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "0ab82f7326f8752b",
+        "type": "template",
+        "z": "439293f90e5f4491",
+        "g": "774c74c067757f9d",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE HTML>\n<html>\n    <head>\n    <title>OBS WS TLS JUMPER</title>\n    <style>\n\t\tbody {\n\t\t}\n\t\t\n\t\t\n\t</style>\n    </head>\n    <body>\n\t\t<h1>OBS WS TLS JUMPER</h1><br>\n\t\t<p>SERVER : </p><p id=\"status_server\"; style=\"color:#ff0000\";>OFF</p>\n\t\t<p>OBS : </p><p id=\"status_obs\"; style=\"color:#ff0000\";>OFF</p>\n\t\t<script>\n\t\t\tvar ws;\n\t\t\tvar ws2;\n\t\t\tvar loc = window.location;\n\t\t\twsUri = \"ws://\"+ loc.host +\"/ws/obs-jumper\";\n            wsUri2 = \"ws://localhost:{{flow.OBSWSport}}\";\n\t\t\tfunction wsConnect() {\n\t\t\t\tconsole.log(\"trying connection to server and OBS\",wsUri);\n\t\t\t\tws = new WebSocket(wsUri);\n\t\t\t\tws2 = new WebSocket(wsUri2);\n\t\t\t\t\n\t\t\t\tws.onmessage = function(msg) {\n\t\t\t\t\tconsole.log(\"message from server received\");\n\t\t\t\t\tws2.send(msg.data)\n\t\t\t\t}\n\t\t\t\tws.onopen = function() {\n\t\t\t\t\t//ws.send(\"Open for data\");\n\t\t\t\t\tconsole.log(\"connected to server\");\n\t\t\t\t\tdocument.getElementById(\"status_server\").innerHTML = \"ON\";\n\t\t\t\t\tdocument.getElementById(\"status_server\").style.color = \"#4fd800\";\n\t\t\t\t}\n\t\t\t\tws.onclose = function() {\n\t\t\t\t\t// in case of lost connection tries to reconnect every 3 secs\n\t\t\t\t\tsetTimeout(wsConnect,3000);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tws2.onmessage = function(msg) {\n\t\t\t\t\tconsole.log(\"message from server received\");\n\t\t\t\t\tws.send(msg.data)\n\t\t\t\t}\n\t\t\t\tws2.onopen = function() {\n\t\t\t\t\t//ws.send(\"Open for data\");\n\t\t\t\t\tconsole.log(\"connected to OBS\");\n\t\t\t\t\tdocument.getElementById(\"status_obs\").innerHTML = \"ON\";\n\t\t\t\t\tdocument.getElementById(\"status_obs\").style.color = \"#4fd800\";\n\t\t\t\t}\n\t\t\t\tws2.onclose = function() {\n\t\t\t\t\t// in case of lost connection tries to reconnect every 3 secs\n\t\t\t\t\tsetTimeout(wsConnect,3000);\n\t\t\t\t}\n\t\t\t}\n\t\t\twsConnect();\n\t    </script>\n    </body>\n</html>",
+        "output": "str",
+        "x": 1120,
+        "y": 60,
+        "wires": [
+            [
+                "48423c40fd94f643"
+            ]
+        ]
+    },
+    {
+        "id": "48423c40fd94f643",
+        "type": "http response",
+        "z": "439293f90e5f4491",
+        "g": "774c74c067757f9d",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1250,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e0ac1afd4793f936",
+        "type": "http in",
+        "z": "439293f90e5f4491",
+        "g": "774c74c067757f9d",
+        "name": "",
+        "url": "/obs-jumper",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 920,
+        "y": 60,
+        "wires": [
+            [
+                "0ab82f7326f8752b"
+            ]
+        ]
+    },
+    {
+        "id": "a22e014a9168b0d3",
+        "type": "change",
+        "z": "439293f90e5f4491",
+        "g": "18d3c264c07b4120",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "_session",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 60,
+        "wires": [
+            [
+                "6afaebe633204668"
+            ]
+        ]
+    },
+    {
+        "id": "667e1e6ff444caca",
+        "type": "function",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "",
+        "func": "msg.salt = msg.payload.d.authentication.salt;\nmsg.challenge = msg.payload.d.authentication.challenge;\nmsg.payload = flow.get(\"OBSWSpassword\")+msg.salt;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 300,
+        "wires": [
+            [
+                "8a74eaf39165a1e8"
+            ]
+        ]
+    },
+    {
+        "id": "8a74eaf39165a1e8",
+        "type": "sha256",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "sha256",
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "649053179c67ea21"
+            ]
+        ]
+    },
+    {
+        "id": "649053179c67ea21",
+        "type": "base64",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "",
+        "action": "str",
+        "property": "payload",
+        "x": 510,
+        "y": 300,
+        "wires": [
+            [
+                "31b8067e33aa7f84"
+            ]
+        ]
+    },
+    {
+        "id": "31b8067e33aa7f84",
+        "type": "function",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "",
+        "func": "msg.payload = msg.payload+msg.challenge;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 340,
+        "wires": [
+            [
+                "6a3dc718253f9ba8"
+            ]
+        ]
+    },
+    {
+        "id": "6a3dc718253f9ba8",
+        "type": "sha256",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "sha256",
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "f2e770fe49450e0c"
+            ]
+        ]
+    },
+    {
+        "id": "f2e770fe49450e0c",
+        "type": "base64",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "",
+        "action": "str",
+        "property": "payload",
+        "x": 530,
+        "y": 340,
+        "wires": [
+            [
+                "9e43380ed894e2c2"
+            ]
+        ]
+    },
+    {
+        "id": "9e43380ed894e2c2",
+        "type": "function",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "",
+        "func": "msg.payload = \n{\n    \"op\": 1,\n    \"d\": {\n        \"rpcVersion\": 1,\n        \"authentication\": msg.payload,\n        \"eventSubscriptions\": (flow.get(\"eventSubscriptions\")||33)\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 380,
+        "wires": [
+            [
+                "04da89f0ee0e1822"
+            ]
+        ]
+    },
+    {
+        "id": "b76562d009cdac99",
+        "type": "switch",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "",
+        "property": "payload.d.authentication",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "2957e6aac0dddfa8"
+            ],
+            [
+                "667e1e6ff444caca"
+            ]
+        ]
+    },
+    {
+        "id": "38e9152b08e0e522",
+        "type": "ui_dropdown",
+        "z": "439293f90e5f4491",
+        "g": "c413499401ce8677",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "da2742bdb78c0e58",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": true,
+        "options": [
+            {
+                "label": "General",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "Config",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Scenes",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "Inputs",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "Transitions",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "Filters",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "Outputs",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "SceneItems",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "MediaInputs",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "Vendors",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "Ui",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "InputVolumeMeters",
+                "value": "16",
+                "type": "str"
+            },
+            {
+                "label": "InputActiveStateChanged",
+                "value": "17",
+                "type": "str"
+            },
+            {
+                "label": "InputShowStateChanged",
+                "value": "18",
+                "type": "str"
+            },
+            {
+                "label": "SceneItemTransformChanged",
+                "value": "19",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 900,
+        "y": 160,
+        "wires": [
+            [
+                "9f5ca7620cfc9e49"
+            ]
+        ]
+    },
+    {
+        "id": "9f5ca7620cfc9e49",
+        "type": "function",
+        "z": "439293f90e5f4491",
+        "g": "c413499401ce8677",
+        "name": "",
+        "func": "var splitEventSub = \"000000000000000000001\".split(\"\");\n\nfor (var element in msg.payload){\n    splitEventSub[msg.payload[element]] = \"1\";\n}\n\nvar reverseEventSub = splitEventSub.reverse();\nmsg.payload = parseInt(reverseEventSub.join(\"\"), 2);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 160,
+        "wires": [
+            [
+                "e273fe28a425b6a3"
+            ]
+        ]
+    },
+    {
+        "id": "e273fe28a425b6a3",
+        "type": "change",
+        "z": "439293f90e5f4491",
+        "g": "c413499401ce8677",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "eventSubscriptions",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2957e6aac0dddfa8",
+        "type": "function",
+        "z": "439293f90e5f4491",
+        "g": "314cd3150839235c",
+        "name": "",
+        "func": "msg.payload = \n{\n    \"op\": 1,\n    \"d\": {\n        \"rpcVersion\": 1,\n        \"eventSubscriptions\": (flow.get(\"eventSubscriptions\")||33)\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "04da89f0ee0e1822"
+            ]
+        ]
+    },
+    {
+        "id": "ca8ffc0f36835e71",
+        "type": "ui_dropdown",
+        "z": "439293f90e5f4491",
+        "g": "f1ab990f8efd915a",
+        "name": "",
+        "label": "Active Scene",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "da2742bdb78c0e58",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 590,
+        "y": 540,
+        "wires": [
+            [
+                "aa75ce230d935396"
+            ]
+        ]
+    },
+    {
+        "id": "ec9610882fbad670",
+        "type": "link in",
+        "z": "439293f90e5f4491",
+        "g": "f1ab990f8efd915a",
+        "name": "",
+        "links": [
+            "5c2e63196edb8d23"
+        ],
+        "x": 95,
+        "y": 520,
+        "wires": [
+            [
+                "4294b6c615b22873"
+            ]
+        ]
+    },
+    {
+        "id": "4294b6c615b22873",
+        "type": "switch",
+        "z": "439293f90e5f4491",
+        "g": "f1ab990f8efd915a",
+        "name": "",
+        "property": "payload.op",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 190,
+        "y": 520,
+        "wires": [
+            [
+                "f23fddc2be9c2431"
+            ],
+            [
+                "57aa5f8bf77d3c7c"
+            ],
+            [
+                "84a78d61aff23be9"
+            ]
+        ]
+    },
+    {
+        "id": "db9e59b564316bc9",
+        "type": "function",
+        "z": "439293f90e5f4491",
+        "g": "f1ab990f8efd915a",
+        "name": "",
+        "func": "msg.options = [];\nvar scenes = msg.payload.d.eventData.scenes;\nfor (var element in scenes){\n    msg.options.push(scenes[element].sceneName);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 520,
+        "wires": [
+            [
+                "ca8ffc0f36835e71"
+            ]
+        ]
+    },
+    {
+        "id": "f23fddc2be9c2431",
+        "type": "function",
+        "z": "439293f90e5f4491",
+        "g": "f1ab990f8efd915a",
+        "name": "Get scenes list",
+        "func": "msg.payload =\n{\n  \"op\": 6,\n  \"d\": {\n    \"requestType\": \"GetSceneList\",\n    \"requestId\": \"scenesList\"\n  }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 480,
+        "wires": [
+            [
+                "eae4b9c9a091cdfe"
+            ]
+        ]
+    },
+    {
+        "id": "57aa5f8bf77d3c7c",
+        "type": "switch",
+        "z": "439293f90e5f4491",
+        "g": "f1ab990f8efd915a",
+        "name": "",
+        "property": "payload.d.eventType",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "SceneListChanged",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "db9e59b564316bc9"
+            ]
+        ]
+    },
+    {
+        "id": "aa75ce230d935396",
+        "type": "function",
+        "z": "439293f90e5f4491",
+        "g": "f1ab990f8efd915a",
+        "name": "Set selected scene",
+        "func": "msg.payload =\n{\n  \"op\": 6,\n  \"d\": {\n    \"requestType\": \"SetCurrentProgramScene\",\n    \"requestId\": \"prout\",\n    \"requestData\": {\n      \"sceneName\": msg.payload\n    }\n  }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 540,
+        "wires": [
+            [
+                "eae4b9c9a091cdfe"
+            ]
+        ]
+    },
+    {
+        "id": "84a78d61aff23be9",
+        "type": "switch",
+        "z": "439293f90e5f4491",
+        "g": "f1ab990f8efd915a",
+        "name": "",
+        "property": "payload.d.requestType",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "GetSceneList",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 560,
+        "wires": [
+            [
+                "e7a92e2bea4c2ed3"
+            ]
+        ]
+    },
+    {
+        "id": "eae4b9c9a091cdfe",
+        "type": "link out",
+        "z": "439293f90e5f4491",
+        "g": "f1ab990f8efd915a",
+        "name": "Exit OpCode 1",
+        "mode": "link",
+        "links": [
+            "a99766e58cf4caf4"
+        ],
+        "x": 835,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e7a92e2bea4c2ed3",
+        "type": "function",
+        "z": "439293f90e5f4491",
+        "g": "f1ab990f8efd915a",
+        "name": "",
+        "func": "msg.options = [];\nvar scenes = msg.payload.d.responseData.scenes;\nfor (var element in scenes){\n    msg.options.push(scenes[element].sceneName);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 560,
+        "wires": [
+            [
+                "ca8ffc0f36835e71"
+            ]
+        ]
+    },
+    {
+        "id": "8064f64dbd86b572",
+        "type": "ui_form",
+        "z": "439293f90e5f4491",
+        "name": "",
+        "label": "OBS WS parameters",
+        "group": "da2742bdb78c0e58",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Port",
+                "value": "port",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Password",
+                "value": "password",
+                "type": "text",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "port": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 180,
+        "y": 640,
+        "wires": [
+            [
+                "f6386863907ebcd6"
+            ]
+        ]
+    },
+    {
+        "id": "f6386863907ebcd6",
+        "type": "change",
+        "z": "439293f90e5f4491",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "OBSWSport",
+                "pt": "flow",
+                "to": "payload.port",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "OBSWSpassword",
+                "pt": "flow",
+                "to": "payload.password",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6fdb978375899d4f",
+        "type": "websocket-listener",
+        "path": "/ws/obs-jumper",
+        "wholemsg": "false"
+    },
+    {
+        "id": "da2742bdb78c0e58",
+        "type": "ui_group",
+        "name": "OBS WS 5.0 Configuration",
+        "tab": "9d235cc14e3b01d2",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9d235cc14e3b01d2",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
